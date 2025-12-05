@@ -1,95 +1,698 @@
-<!-- === СПЕЦИАЛИСТЫ === -->
-<section id="doctors" class="doctors-section">
-  <div class="container">
-    <h2>Наши специалисты</h2>
-    <p class="section-subtitle">Квалифицированные врачи с индивидуальным подходом к каждому пациенту</p>
-    <div class="doctors-grid">
-      <div class="doctor-card">
-        <div class="doctor-img-wrapper">
-          <img src="https://via.placeholder.com/300x400/1e88e5/ffffff?text=Невролог" alt="Невролог" />
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дневной стационар | Медицинский центр "Здоровье"</title>
+    <meta name="description" content="Дневной стационар с современным оборудованием и квалифицированными врачами. Комплексное лечение без госпитализации.">
+    <meta name="keywords" content="дневной стационар, лечение, медицина, врачи, капельницы, уколы, кардиология, неврология">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="Дневной стационар | Медицинский центр">
+    <meta property="og:description" content="Комплексное лечение без госпитализации в комфортных условиях">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+</head>
+<body>
+    <!-- Кнопка "Наверх" -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="#hero">
+                        <img src="https://via.placeholder.com/200x60/2a6eb7/ffffff?text=Day+Hospital" alt="Дневной стационар - Медицинский центр" class="logo-img">
+                    </a>
+                </div>
+                
+                <!-- Контакты для десктопа -->
+                <div class="header-contacts desktop-only">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <span class="contact-label">Есть вопросы? Звоните!</span>
+                            <a href="tel:+78001234567" class="contact-phone">8 800 123-45-67</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <span class="contact-label">Адрес клиники</span>
+                            <span class="contact-address">г. Махачкала, ул. Примерная, 123</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <span class="contact-label">Часы работы</span>
+                            <span class="contact-time">Пн-Пт: 8:00-20:00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Кнопка записи для десктопа -->
+                <div class="header-action desktop-only">
+                    <a href="#appointment" class="btn btn-primary header-btn">Записаться на прием</a>
+                </div>
+                
+                <!-- Кнопка бургер-меню для мобильных -->
+                <button class="menu-toggle mobile-only" id="menuToggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <!-- Навигация (десктоп) -->
+            <nav class="desktop-nav desktop-only" aria-label="Основная навигация">
+                <ul class="nav-list">
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#advantages">Преимущества</a></li>
+                    <li><a href="#doctors">Врачи</a></li>
+                    <li><a href="#prices">Цены</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#faq">Вопросы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="doctor-info">
-          <h3>Невролог</h3>
-          <p>Диагностика и лечение заболеваний нервной системы.</p>
+        
+        <!-- Мобильное меню -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <div class="logo">
+                    <img src="https://via.placeholder.com/150x45/2a6eb7/ffffff?text=Day+Hospital" alt="Логотип">
+                </div>
+                <button class="menu-close" id="menuClose" aria-label="Закрыть меню">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav" aria-label="Мобильная навигация">
+                <ul class="mobile-nav-list">
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="#services"><i class="fas fa-stethoscope"></i> Услуги</a></li>
+                    <li><a href="#advantages"><i class="fas fa-star"></i> Преимущества</a></li>
+                    <li><a href="#doctors"><i class="fas fa-user-md"></i> Врачи</a></li>
+                    <li><a href="#prices"><i class="fas fa-tag"></i> Цены</a></li>
+                    <li><a href="#reviews"><i class="fas fa-comment"></i> Отзывы</a></li>
+                    <li><a href="#faq"><i class="fas fa-question-circle"></i> Вопросы</a></li>
+                    <li><a href="#contacts"><i class="fas fa-address-book"></i> Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-contacts">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <span class="contact-label">Есть вопросы? Звоните!</span>
+                        <a href="tel:+78001234567" class="contact-phone">8 800 123-45-67</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <span class="contact-label">Адрес клиники</span>
+                        <span class="contact-address">г. Махачкала, ул. Примерная, 123</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <span class="contact-label">Часы работы</span>
+                        <span class="contact-time">Пн-Пт: 8:00-20:00</span>
+                    </div>
+                </div>
+                <a href="#appointment" class="btn btn-primary btn-block mobile-appointment-btn">
+                    <i class="fas fa-calendar-check"></i> Записаться на прием
+                </a>
+            </div>
         </div>
-      </div>
-      <div class="doctor-card">
-        <div class="doctor-img-wrapper">
-          <img src="https://via.placeholder.com/300x400/7b1fa2/ffffff?text=Гинеколог" alt="Гинеколог" />
-        </div>
-        <div class="doctor-info">
-          <h3>Гинеколог</h3>
-          <p>Комплексное ведение женского здоровья.</p>
-        </div>
-      </div>
-      <div class="doctor-card">
-        <div class="doctor-img-wrapper">
-          <img src="https://via.placeholder.com/300x400/ff9800/ffffff?text=Психолог" alt="Психолог" />
-        </div>
-        <div class="doctor-info">
-          <h3>Психолог</h3>
-          <p>Помощь в преодолении стресса и тревожности.</p>
-        </div>
-      </div>
-      <div class="doctor-card">
-        <div class="doctor-img-wrapper">
-          <img src="https://via.placeholder.com/300x400/43a047/ffffff?text=Терапевт" alt="Терапевт" />
-        </div>
-        <div class="doctor-info">
-          <h3>Терапевт</h3>
-          <p>Первичный приём и профилактика заболеваний.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        
+        <!-- Оверлей для мобильного меню -->
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
 
-<!-- === УСЛУГИ === -->
-<section id="services" class="services-section">
-  <div class="container">
-    <h2>Наши услуги</h2>
-    <p class="section-subtitle">Современные методы диагностики, лечения и восстановления</p>
-    <div class="services-grid">
-      <!-- Приём -->
-      <div class="service-card main-service">
-        <div class="service-icon">
-          <img src="https://via.placeholder.com/70/d32f2f/ffffff?text=Приём" alt="Прием" />
+    <!-- Главный баннер -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Дневной стационар</h1>
+                <p class="hero-subtitle">Комплексное лечение без госпитализации в комфортных условиях современной клиники</p>
+                <ul class="hero-features">
+                    <li><i class="fas fa-check-circle"></i> Современное оборудование экспертного класса</li>
+                    <li><i class="fas fa-check-circle"></i> Врачи высшей категории с опытом от 10 лет</li>
+                    <li><i class="fas fa-check-circle"></i> Индивидуальный подход к каждому пациенту</li>
+                    <li><i class="fas fa-check-circle"></i> Экономия до 40% по сравнению с круглосуточным стационаром</li>
+                </ul>
+                <div class="hero-actions">
+                    <a href="#appointment" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-alt"></i> Записаться на прием
+                    </a>
+                    <a href="#prices" class="btn btn-secondary btn-large">
+                        <i class="fas fa-tags"></i> Узнать цены
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">лет опыта</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-label">пациентов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">специалистов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">поддержка</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h3>Прием специалистов</h3>
-        <p>Консультации врачей с индивидуальным планом лечения.</p>
-      </div>
+    </section>
 
-      <!-- Диагностика -->
-      <div class="service-card main-service">
-        <div class="service-icon">
-          <img src="https://via.placeholder.com/70/1976d2/ffffff?text=Диагностика" alt="Диагностика" />
+    <!-- О нас -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">О нашем дневном стационаре</h2>
+                <p class="section-subtitle">Мы предлагаем качественное медицинское обслуживание без необходимости круглосуточного пребывания в клинике</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Дневной стационар — это современная форма медицинской помощи, которая позволяет получать комплексное лечение в условиях стационара, но при этом вечером возвращаться домой к своей семье.</p>
+                    <p>Мы обеспечиваем все необходимое для диагностики, лечения и восстановления пациентов с различными заболеваниями. Наш стационар оборудован комфортабельными палатами, современной диагностической и лечебной аппаратурой.</p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Лицензированная деятельность</h3>
+                            <p>Все медицинские услуги предоставляются на основании государственной лицензии</p>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-award"></i>
+                            <h3>Сертифицированные специалисты</h3>
+                            <p>Врачи регулярно проходят повышение квалификации в ведущих клиниках страны</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Дневной стационар - современная палата">
+                        <div class="image-badge">
+                            <i class="fas fa-heart"></i>
+                            <span>Забота о вашем здоровье</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h3>Диагностические процедуры</h3>
-        <p>Полный спектр обследований для точного диагноза.</p>
-      </div>
+    </section>
 
-      <!-- Восстановление -->
-      <div class="service-card rehab-service">
-        <h3>Услуги восстановительной медицины</h3>
-        <div class="tags">
-          <span class="tag">ЛФК</span>
-          <span class="tag">Физиотерапия</span>
-          <span class="tag">Озонотерапия</span>
-          <span class="tag">УВТ</span>
-          <span class="tag">Лечебный массаж</span>
-          <span class="tag">ВЛОК</span>
+    <!-- Преимущества -->
+    <section class="section advantages" id="advantages">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши преимущества</h2>
+                <p class="section-subtitle">Почему пациенты выбирают наш дневной стационар</p>
+            </div>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Возвращение домой</h3>
+                    <p>Вечером вы возвращаетесь к семье и домашнему уюту</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Экономия средств</h3>
+                    <p>Стоимость лечения ниже на 30-40% по сравнению с круглосуточным стационаром</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Индивидуальный подход</h3>
+                    <p>Персональная программа лечения для каждого пациента</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Гибкий график</h3>
+                    <p>Вы можете совмещать лечение с работой или учебой</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <h3>Комфортные условия</h3>
+                    <p>Уютные палаты, Wi-Fi, телевизор, питание по выбору</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Полный комплекс</h3>
+                    <p>Диагностика, лечение, наблюдение врачей в одном месте</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <!-- Исследования -->
-      <div class="service-card diagnostics-service">
-        <h3>Диагностические исследования</h3>
-        <ul class="diagnostics-list">
-          <li>Клиническая лабораторная диагностика</li>
-          <li>УЗИ органов брюшной полости, щитовидной железы</li>
-          <li>ЭКГ — оценка состояния сердца</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Услуги -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши услуги</h2>
+                <p class="section-subtitle">Широкий спектр медицинских услуг в условиях дневного стационара</p>
+            </div>
+            
+            <div class="services-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="therapy">Терапия</button>
+                    <button class="tab-btn" data-tab="procedures">Процедуры</button>
+                    <button class="tab-btn" data-tab="diagnostics">Диагностика</button>
+                </div>
+                
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="therapy">
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-heartbeat"></i>
+                                </div>
+                                <h3>Кардиология</h3>
+                                <p>Диагностика и лечение заболеваний сердечно-сосудистой системы, контроль давления, ЭКГ</p>
+                                <a href="#appointment" class="service-link">Записаться <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h3>Неврология</h3>
+                                <p>Лечение заболеваний нервной системы, реабилитация после инсультов, мигрени</p>
+                                <a href="#appointment" class="service-link">Записаться <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-lungs"></i>
+                                </div>
+                                <h3>Пульмонология</h3>
+                                <p>Терапия заболеваний органов дыхания, ингаляционная терапия, лечение бронхитов</p>
+                                <a href="#appointment" class="service-link">Записаться <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-stomach"></i>
+                                </div>
+                                <h3>Гастроэнтерология</h3>
+                                <p>Лечение заболеваний ЖКТ, гастритов, язвенной болезни, колитов</p>
+                                <a href="#appointment" class="service-link">Записаться <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="procedures">
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-prescription-bottle-alt"></i>
+                                </div>
+                                <h3>Капельницы</h3>
+                                <p>Курсовое лечение, витаминотерапия, детоксикация, восстановительные капельницы</p>
+                                <a href="#appointment" class="service-link">Записаться <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-syringe"></i>
+                                </div>
+                                <h3>Инъекции</h3>
+                                <p>Внутримышечные, внутривенные, подкожные инъекции, блокады</p>
+                                <a href="#appointment" class="service-link">Записаться <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-hand-holding-medical"></i>
+                                </div>
+                                <h3>Физиотерапия</h3>
+                                <p>Электрофорез, магнитотерапия, лазеротерапия, УВЧ, массаж</p>
+                                <a href="#appointment" class="service-link">Записаться <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-bath"></i>
+                                </div>
+                                <h3>Лечебные ванны</h3>
+                                <p>Хвойные, жемчужные, кислородные ванны для релаксации и лечения</p>
+                                <a href="#appointment" class="service-link">Записаться <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Врачи -->
+    <section class="section doctors" id="doctors">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши врачи</h2>
+                <p class="section-subtitle">С вами работают высококвалифицированные специалисты</p>
+            </div>
+            
+            <div class="doctors-slider">
+                <div class="doctor-card">
+                    <div class="doctor-photo">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Доктор Иванова">
+                        <div class="doctor-experience">15 лет опыта</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Иванова Анна Петровна</h3>
+                        <p class="doctor-specialty">Терапевт высшей категории</p>
+                        <p class="doctor-description">Специалист по внутренним болезням, кандидат медицинских наук</p>
+                        <div class="doctor-actions">
+                            <a href="#appointment" class="btn btn-small">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="doctor-card">
+                    <div class="doctor-photo">
+                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Доктор Сидоров">
+                        <div class="doctor-experience">12 лет опыта</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Сидоров Алексей Владимирович</h3>
+                        <p class="doctor-specialty">Кардиолог высшей категории</p>
+                        <p class="doctor-description">Специалист по заболеваниям сердечно-сосудистой системы</p>
+                        <div class="doctor-actions">
+                            <a href="#appointment" class="btn btn-small">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="doctor-card">
+                    <div class="doctor-photo">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Доктор Петрова">
+                        <div class="doctor-experience">10 лет опыта</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Петрова Мария Сергеевна</h3>
+                        <p class="doctor-specialty">Невролог первой категории</p>
+                        <p class="doctor-description">Специалист по заболеваниям нервной системы и реабилитации</p>
+                        <div class="doctor-actions">
+                            <a href="#appointment" class="btn btn-small">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Цены -->
+    <section class="section prices" id="prices">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши цены</h2>
+                <p class="section-subtitle">Прозрачное ценообразование без скрытых платежей</p>
+            </div>
+            
+            <div class="price-cards">
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3>Базовый пакет</h3>
+                        <div class="price-amount">от 1 500 ₽/день</div>
+                    </div>
+                    <ul class="price-features">
+                        <li><i class="fas fa-check"></i> Консультация врача</li>
+                        <li><i class="fas fa-check"></i> Пребывание в палате</li>
+                        <li><i class="fas fa-check"></i> Наблюдение медсестры</li>
+                        <li><i class="fas fa-check"></i> 1 процедура на выбор</li>
+                        <li><i class="fas fa-times"></i> Диагностические исследования</li>
+                    </ul>
+                    <a href="#appointment" class="btn btn-primary btn-block">Выбрать пакет</a>
+                </div>
+                
+                <div class="price-card featured">
+                    <div class="price-badge">Популярный</div>
+                    <div class="price-header">
+                        <h3>Стандартный пакет</h3>
+                        <div class="price-amount">от 2 500 ₽/день</div>
+                    </div>
+                    <ul class="price-features">
+                        <li><i class="fas fa-check"></i> Консультация врача</li>
+                        <li><i class="fas fa-check"></i> Пребывание в палате</li>
+                        <li><i class="fas fa-check"></i> Постоянное наблюдение</li>
+                        <li><i class="fas fa-check"></i> 3 процедуры на выбор</li>
+                        <li><i class="fas fa-check"></i> Базовая диагностика</li>
+                    </ul>
+                    <a href="#appointment" class="btn btn-primary btn-block">Выбрать пакет</a>
+                </div>
+                
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3>Премиум пакет</h3>
+                        <div class="price-amount">от 4 000 ₽/день</div>
+                    </div>
+                    <ul class="price-features">
+                        <li><i class="fas fa-check"></i> Консультация главного врача</li>
+                        <li><i class="fas fa-check"></i> VIP-палата</li>
+                        <li><i class="fas fa-check"></i> Индивидуальная программа</li>
+                        <li><i class="fas fa-check"></i> Все процедуры по показаниям</li>
+                        <li><i class="fas fa-check"></i> Полная диагностика</li>
+                    </ul>
+                    <a href="#appointment" class="btn btn-primary btn-block">Выбрать пакет</a>
+                </div>
+            </div>
+            
+            <div class="price-notice">
+                <p><i class="fas fa-info-circle"></i> Точная стоимость рассчитывается индивидуально после консультации врача. Возможна оплата по полису ДМС.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма записи -->
+    <section class="section appointment" id="appointment">
+        <div class="container">
+            <div class="appointment-wrapper">
+                <div class="appointment-content">
+                    <div class="appointment-form">
+                        <h2>Записаться на прием</h2>
+                        <p>Оставьте заявку и мы свяжемся с вами в течение 15 минут</p>
+                        
+                        <form id="appointmentForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Ваше имя" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" placeholder="Ваш телефон" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <select required>
+                                    <option value="" disabled selected>Выберите услугу</option>
+                                    <option value="cardiology">Кардиология</option>
+                                    <option value="neurology">Неврология</option>
+                                    <option value="pulmonology">Пульмонология</option>
+                                    <option value="gastro">Гастроэнтерология</option>
+                                    <option value="injections">Капельницы и уколы</option>
+                                    <option value="consultation">Консультация врача</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea placeholder="Комментарий (симптомы, пожелания)"></textarea>
+                            </div>
+                            
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="privacy" required checked>
+                                <label for="privacy">Я согласен на обработку персональных данных</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-paper-plane"></i> Отправить заявку
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="appointment-info">
+                    <h3>Как проходит запись?</h3>
+                    <ul class="appointment-steps">
+                        <li>
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Оставьте заявку</h4>
+                                <p>Заполните форму или позвоните по телефону</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Консультация</h4>
+                                <p>Наш специалист свяжется с вами для уточнения деталей</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Визит в клинику</h4>
+                                <p>Приходите в назначенное время на прием к врачу</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Начало лечения</h4>
+                                <p>Врач составит индивидуальную программу лечения</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="appointment-contacts">
+                        <h4>Или свяжитесь с нами напрямую:</h4>
+                        <a href="tel:+78001234567" class="contact-phone-large">
+                            <i class="fas fa-phone"></i> 8 800 123-45-67
+                        </a>
+                        <p>Круглосуточная телефонная линия</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="section reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Отзывы пациентов</h2>
+                <p class="section-subtitle">Что говорят наши пациенты о лечении в дневном стационаре</p>
+            </div>
+            
+            <div class="reviews-slider">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Ольга Сергеева</h4>
+                                <span class="review-date">15 марта 2023</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>Проходила лечение в дневном стационаре по поводу гипертонии. Очень понравился индивидуальный подход, внимательные врачи и комфортные условия. После курса капельниц давление нормализовалось, чувствую себя намного лучше. Спасибо!</p>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Андрей Петров</h4>
+                                <span class="review-date">3 апреля 2023</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>Лечил остеохондроз в этом стационаре. Очень удобно, что можно приезжать только на процедуры, а вечером быть дома. Персонал вежливый, процедурный кабинет современный. Результатом доволен, боли значительно уменьшились.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                <p class="section-subtitle">Ответы на самые популярные вопросы о дневном стационаре</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Чем дневной стационар отличается от обычного?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>В дневном стационаре вы получаете такое же комплексное лечение, как в круглосуточном, но при этом ночуете дома. Это позволяет совмещать лечение с работой, учебой и семейными делами, а также экономит средства.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Какие документы нужны для госпитализации?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Для записи в дневной стационар необходимы: паспорт, полис ОМС, направление от лечащего врача (если есть), результаты предыдущих обследований. Мы поможем собрать все необходимые документы.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Можно ли получать лечение по полису ОМС?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </
