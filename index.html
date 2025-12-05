@@ -1,11 +1,102 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Привет мир</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Дневной стационар — Медицинский центр</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  Привет мир!!!
+  <!-- Шапка с меню -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">Дневной<span>Стационар</span></a>
+        <nav class="nav" id="nav">
+          <ul class="nav-list">
+            <li><a href="#home" class="nav-link">Главная</a></li>
+            <li><a href="#services" class="nav-link">Услуги</a></li>
+            <li><a href="#about" class="nav-link">О нас</a></li>
+            <li><a href="#contacts" class="nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+        <button class="burger" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Главная секция -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Современный дневной стационар в Дагестане</h1>
+      <p>Комплексное лечение и реабилитация в комфортных условиях под наблюдением врачей</p>
+      <a href="#services" class="btn">Узнать больше</a>
+    </div>
+  </section>
+
+  <!-- Услуги -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Наши услуги</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Неврология</h3>
+          <p>Диагностика и лечение заболеваний нервной системы</p>
+        </div>
+        <div class="card">
+          <h3>Кардиология</h3>
+          <p>Мониторинг и терапия сердечно-сосудистых заболеваний</p>
+        </div>
+        <div class="card">
+          <h3>Реабилитация</h3>
+          <p>Восстановление после инсультов и травм</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- О нас -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>О центре</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Наш дневной стационар функционирует с 2015 года и оказывает квалифицированную медицинскую помощь пациентам всех возрастов. Мы сочетаем передовые технологии с индивидуальным подходом.</p>
+          <ul>
+            <li>Современное оборудование</li>
+            <li>Опытные врачи</li>
+            <li>Удобное расположение</li>
+            <li>Гибкий график приёма</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="https://via.placeholder.com/400x300" alt="Медицинский центр" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <h2>Свяжитесь с нами</h2>
+      <div class="contact-info">
+        <p><strong>Адрес:</strong> г. Махачкала, ул. Заречная, 15</p>
+        <p><strong>Телефон:</strong> <a href="tel:+78722123456">+7 (8722) 123-456</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@zdoroviydagestan.ru">info@zdoroviydagestan.ru</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Дневной Стационар. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
