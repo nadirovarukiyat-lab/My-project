@@ -1,102 +1,97 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Дневной стационар — Медицинский центр</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Шапка с меню -->
-  <header class="header">
-    <div class="container">
-      <div class="header-content">
-        <a href="#" class="logo">Дневной<span>Стационар</span></a>
-        <nav class="nav" id="nav">
-          <ul class="nav-list">
-            <li><a href="#home" class="nav-link">Главная</a></li>
-            <li><a href="#services" class="nav-link">Услуги</a></li>
-            <li><a href="#about" class="nav-link">О нас</a></li>
-            <li><a href="#contacts" class="nav-link">Контакты</a></li>
-          </ul>
-        </nav>
-        <button class="burger" id="burger">
-          <span></span><span></span><span></span>
-        </button>
+<!-- Специалисты -->
+<section id="doctors" class="doctors-section">
+  <div class="container">
+    <h2>Наши специалисты</h2>
+    <p class="section-subtitle">Квалифицированные врачи с индивидуальным подходом к каждому пациенту</p>
+    <div class="doctors-grid">
+      <div class="doctor-card">
+        <div class="doctor-img-wrapper">
+          <img src="https://via.placeholder.com/300x400/1e88e5/ffffff?text=Невролог" alt="Невролог" />
+        </div>
+        <div class="doctor-info">
+          <h3>Невролог</h3>
+          <p>Диагностика и лечение заболеваний нервной системы, включая мигрени, невралгии и последствия травм.</p>
+        </div>
       </div>
-    </div>
-  </header>
-
-  <!-- Главная секция -->
-  <section id="home" class="hero">
-    <div class="container">
-      <h1>Современный дневной стационар в Дагестане</h1>
-      <p>Комплексное лечение и реабилитация в комфортных условиях под наблюдением врачей</p>
-      <a href="#services" class="btn">Узнать больше</a>
-    </div>
-  </section>
-
-  <!-- Услуги -->
-  <section id="services" class="services">
-    <div class="container">
-      <h2>Наши услуги</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Неврология</h3>
-          <p>Диагностика и лечение заболеваний нервной системы</p>
+      <div class="doctor-card">
+        <div class="doctor-img-wrapper">
+          <img src="https://via.placeholder.com/300x400/7b1fa2/ffffff?text=Гинеколог" alt="Гинеколог" />
         </div>
-        <div class="card">
-          <h3>Кардиология</h3>
-          <p>Мониторинг и терапия сердечно-сосудистых заболеваний</p>
+        <div class="doctor-info">
+          <h3>Гинеколог</h3>
+          <p>Комплексное ведение женского здоровья, профилактика и лечение гинекологических заболеваний.</p>
         </div>
-        <div class="card">
-          <h3>Реабилитация</h3>
-          <p>Восстановление после инсультов и травм</p>
+      </div>
+      <div class="doctor-card">
+        <div class="doctor-img-wrapper">
+          <img src="https://via.placeholder.com/300x400/ff9800/ffffff?text=Психолог" alt="Психолог" />
+        </div>
+        <div class="doctor-info">
+          <h3>Психолог</h3>
+          <p>Помощь в преодолении стресса, тревожности, депрессии и адаптации после болезней.</p>
+        </div>
+      </div>
+      <div class="doctor-card">
+        <div class="doctor-img-wrapper">
+          <img src="https://via.placeholder.com/300x400/43a047/ffffff?text=Терапевт" alt="Терапевт" />
+        </div>
+        <div class="doctor-info">
+          <h3>Терапевт</h3>
+          <p>Первичный приём, обследование, ведение хронических заболеваний и профилактика.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- О нас -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2>О центре</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>Наш дневной стационар функционирует с 2015 года и оказывает квалифицированную медицинскую помощь пациентам всех возрастов. Мы сочетаем передовые технологии с индивидуальным подходом.</p>
-          <ul>
-            <li>Современное оборудование</li>
-            <li>Опытные врачи</li>
-            <li>Удобное расположение</li>
-            <li>Гибкий график приёма</li>
-          </ul>
+<!-- Услуги -->
+<section id="services" class="services-section">
+  <div class="container">
+    <h2>Наши услуги</h2>
+    <p class="section-subtitle">Современные методы диагностики, лечения и восстановления</p>
+
+    <!-- Основные услуги -->
+    <div class="services-grid">
+      <!-- Приём специалистов -->
+      <div class="service-card main-service">
+        <div class="service-icon">
+          <img src="https://via.placeholder.com/70/d32f2f/ffffff?text=Приём" alt="Прием специалистов" />
         </div>
-        <div class="about-image">
-          <img src="https://via.placeholder.com/400x300" alt="Медицинский центр" />
+        <h3>Прием специалистов</h3>
+        <p>Консультации врачей различных профилей с составлением индивидуального плана лечения.</p>
+      </div>
+
+      <!-- Диагностические процедуры -->
+      <div class="service-card main-service">
+        <div class="service-icon">
+          <img src="https://via.placeholder.com/70/1976d2/ffffff?text=Диагностика" alt="Диагностические процедуры" />
+        </div>
+        <h3>Диагностические процедуры</h3>
+        <p>Полный спектр обследований для точной постановки диагноза и подбора терапии.</p>
+      </div>
+
+      <!-- Восстановительная медицина -->
+      <div class="service-card rehab-service">
+        <h3>Услуги восстановительной медицины</h3>
+        <div class="tags">
+          <span class="tag">ЛФК</span>
+          <span class="tag">Физиотерапия</span>
+          <span class="tag">Озонотерапия</span>
+          <span class="tag">УВТ</span>
+          <span class="tag">Лечебный массаж</span>
+          <span class="tag">ВЛОК</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Контакты -->
-  <section id="contacts" class="contacts">
-    <div class="container">
-      <h2>Свяжитесь с нами</h2>
-      <div class="contact-info">
-        <p><strong>Адрес:</strong> г. Махачкала, ул. Заречная, 15</p>
-        <p><strong>Телефон:</strong> <a href="tel:+78722123456">+7 (8722) 123-456</a></p>
-        <p><strong>Email:</strong> <a href="mailto:info@zdoroviydagestan.ru">info@zdoroviydagestan.ru</a></p>
+      <!-- Диагностические исследования -->
+      <div class="service-card diagnostics-service">
+        <h3>Диагностические исследования</h3>
+        <ul class="diagnostics-list">
+          <li>Клиническая лабораторная диагностика</li>
+          <li>УЗИ органов брюшной полости, щитовидной железы, мочеполовой системы</li>
+          <li>ЭКГ — оценка состояния сердца</li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <!-- Подвал -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Дневной Стационар. Все права защищены.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  </div>
+</section>
