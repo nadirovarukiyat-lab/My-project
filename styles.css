@@ -1,0 +1,12 @@
+/* style.css */
+body {
+  margin: 0;
+  height: 100vh;          /* высота окна */
+  display: flex;          /* центрирование */
+  justify-content: center;
+  align-items: center;
+  background: #fafafa;    /* почти белый фон */
+  font-family: Arial, sans-serif;
+  color: #222;            /* тёмно-серый текст */
+  font-size: 3rem;        /* крупный шрифт */
+}
